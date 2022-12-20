@@ -32,7 +32,8 @@ h1 {
 }
 
 .img{
-    flex: 50%;
+    flex-shrink: 0;
+    flex-basis: 50%;
     background-image: url(/images/image-product-desktop.jpg);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -40,6 +41,7 @@ h1 {
 }
 
 .card-content{
+    flex-shrink: 0;
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
@@ -80,4 +82,45 @@ button:hover{
 button p {
     font-weight: 700;
     color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 1439px){
+    .card-container{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .card-container{
+        flex-direction: column;
+        min-height: 50rem;
+    }
+
+    .img {
+        background-image: url('images/image-product-mobile.jpg');
+        min-height: 25rem;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 15px;
+    }
+
+    .card-content{
+        padding: 0 20px;
+        flex: 2;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .card-container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 385px){
+    .card-container{
+        min-height: 40rem;
+    }
+
+    .img {
+        min-height: 14rem;
+    }
 }
