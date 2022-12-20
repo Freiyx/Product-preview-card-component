@@ -34,7 +34,7 @@ h1 {
 .img{
     flex-shrink: 0;
     flex-basis: 50%;
-    background-image: url(/images/image-product-desktop.jpg);
+    background-image: url('images/image-product-desktop.jpg');
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     background-size: cover;
